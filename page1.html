@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Офис - Страница 1</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink;  
+            color: white;      
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page1.html">Персонажи. Таблица</a></li>
+            <li><a href="page2.html">Галерея</a></li>
+            <li><a href="page3.html">Личные контакты</a></li>
+            <li><a href="page4.html">Заказ мерча</a></li>
+            <li><a href="https://officeserial.ru/" target="_blank">Смотреть сериал</a></li>
+        </ul>
+    </nav>
+
+    <h1 align="center">Таблица. Персонажи сериала "Офис"</h1>
+
+    <table align="center" cellspacing="0" cellpadding="10" border="1" width="700px" background="img/paper.jpg">
+        <thead>
+        <tr>
+            <th>Фото</th>
+            <th>Имя персонажа</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><img src="img/mikel.jpg" width="200" alt="Майкл Скотт" class="character-photo"></td>
+            <td><a href="https://ru.wikipedia.org/wiki/Майкл_Скотт_(персонаж)" target="_blank">Майкл Скотт</a></td>
+            <td>Майкл Скотт — директор филиала Dunder Mifflin в Скрантоне. Известен своей эксцентричностью и странным чувством юмора.</td>
+        </tr>
+        <tr>
+            <td><img src="img/dwight.webp" width="200" alt="Дуайт Шрут" class="character-photo"></td>
+            <td><a href="https://en.wikipedia.org/wiki/Dwight_Schrute" target="_blank">Дуайт Шрут</a></td>
+            <td>Дуайт Шрут — неофициальный помощник директора, который предан работе и стремится занять место Майкла.</td>
+        </tr>
+        <tr>
+            <td><img src="img/jim.png" width="200" alt="Джим Халперт" class="character-photo"></td>
+            <td><a href="https://ru.wikipedia.org/wiki/Джим_Халперт" target="_blank">Джим Халперт</a></td>
+            <td>Джим Халперт — продавец, известный своими розыгрышами Дуайта. Влюблен в Пэм.</td>
+        </tr>
+        <tr>
+            <td><img src="img/pam.jpg" width="200" alt="Пэм Бизли" class="character-photo"></td>
+            <td><a href="https://ru.wikipedia.org/wiki/Пэм_Бисли_(персонаж)" target="_blank">Пэм Бизли</a></td>
+            <td>Пэм Бизли — секретарь, которая мечтает стать художницей. Развивает отношения с Джимом на протяжении сериала.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Офис - Главная</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink; 
+            color: white;            
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+    
+        .section {
+            border: 2px solid pink; 
+            border-radius: 5px;     
+            padding: 15px;          
+            margin-bottom: 20px;    
+            background-color: white; 
+        }
+
+        .thumbnail {
+            width: 100px;  
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page1.html">Персонажи. Таблица</a></li>
+            <li><a href="page2.html">Галерея</a></li>
+            <li><a href="page3.html">Личные контакты</a></li>
+            <li><a href="page4.html">Заказ мерча</a></li>
+            <li><a href="https://officeserial.ru/" target="_blank">Смотреть сериал</a></li>
+        </ul>
+    </nav>
+
+    <h1>Добро пожаловать на сайт, посвященный сериалу "Офис"</h1>
+    <p>Этот фан-сайт посвященный культовому сериалу "Офис". На этой странице вы найдете краткую информацию о сериале, а также ссылки на другие материалы.</p>
+
+    <h2 id="start">Содержание</h2>
+    <ul>
+        <li><a href="#about">О сериале</a></li>
+        <li><a href="#characters">Главные персонажи</a></li>
+        <li><a href="#seasons">Сезоны</a></li>
+        <li><a href="#episodes">Лучшие серии</a></li>
+    </ul>
+
+    <div class="section">
+        <h2 id="about">О сериале</h2>
+        <p>Сериал "Офис" — это комедийное шоу, которое рассказывает о буднях работников в офисе компании Dunder Mifflin.</p>
+    </div>
+
+    <div class="section">
+        <h2 id="characters">Главные персонажи</h2>
+        <ul>
+            <li>Майкл Скотт — директор филиала компании Dunder Mifflin в Скрантоне, штат Пенсильвания</li>
+            <li>Дуайт Шрут — неофициальный помощник директора</li>
+            <li>Джим Халперт — продавец, влюблен в Пэм</li>
+            <li>Пэм Бизли — секретарь и художница</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 id="seasons">Сезоны</h2>
+        <ol>
+            <li>Сезон 1 (2005 г.)</li>
+            <li>Сезон 2 (2005-2006 гг.)</li>
+            <li>Сезон 3 (2006-2007 гг.)</li>
+            <li>Сезон 4 (2007-2008 гг.)</li>
+            <li>Сезон 5 (2008-2009 гг.)</li>
+            <li>Сезон 6 (2009-2010 гг.)</li>
+            <li>Сезон 7 (2010-2011 гг.)</li>
+            <li>Сезон 8 (2011-2012 гг.)</li>
+            <li>Сезон 9 (2012-2013 гг.)</li>
+        </ol>
+    </div>
+    
+    <div class="section">
+        <h2 id="episodes">Лучшие серии</h2>
+        <ul>
+            <li>1 сезон:
+                <ul>
+                    <li>"Пилот"</li>
+                    <li>"День разнообразия"</li>
+                </ul>
+            </li>
+            <li>2 сезон:
+                <ul>
+                    <li>"Рождественская вечеринка"</li>
+                    <li>"Огненная тревога"</li>
+                    <li>"Обсуждение эвакуации"</li>
+                </ul>
+            </li>
+            <li>3 сезон:
+                <ul>
+                    <li>"Переезд в Стэмфорд"</li>
+                    <li>"Слияние филиалов"</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <a href="#start">Содержание</a>
+
+    <h2>Кадр из сериала</h2>
+    <a href="img/office_2.jpeg" target="_blank">
+        <img src="img/office_2.jpeg" alt="кадр" class="thumbnail">
+    </a>
+
+    <p>Кликните на миниатюру, чтобы открыть изображение в полном размере (600x400 пикселей) в новой вкладке.</p>
+
+    <script>
+
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>

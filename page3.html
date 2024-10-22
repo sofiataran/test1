@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Офис - Страница 1</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink; 
+            color: white;            
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border: 2px solid pink;
+            border-radius: 10px;
+            padding: 20px;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], 
+        input[type="reset"] {
+            font-weight: bold; 
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        input[type="submit"] {
+            background-color: #ff66b2; 
+            color: white;
+            margin-right: 10%; 
+        }
+
+        input[type="reset"] {
+            background-color: #ccc; 
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff4d94; 
+        }
+
+        input[type="reset"]:hover {
+            background-color: #b3b3b3;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page1.html">Персонажи. Таблица</a></li>
+            <li><a href="page2.html">Галерея</a></li>
+            <li><a href="page3.html">Личные контакты</a></li>
+            <li><a href="page4.html">Заказ мерча</a></li>
+            <li><a href="https://officeserial.ru/" target="_blank">Смотреть сериал</a></li>
+        </ul>
+    </nav>
+    <h3>Формы. Отправляем личные контактные данные на сервер</h3>
+
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    
+        <p>Для поисковика:<input type="hidden" name="q" value="search"></p>
+    
+        <p>Фамилия: <input type="text" name="second_name" size=20 value="Таран"></p>
+    
+        <p>Имя: <input type="text" name="first_name" size=20 value="Софья"></p>
+    
+        <p>Группа: <input type="number" name="group" size=20 value="1"></p>
+    
+        <p>Мобильный телефон: <input type="tel" name="phone" size=20 value="89006574230"></p>
+    
+        <p>Электронная почта: <input type="email" name="email" size=20 value="smtaran@edu.hse.ru"></p>
+    
+        <p>Дата отправки: <input type="date" name="user_date" value="2024-10-15"></p>
+    
+        <p>
+            <input type="reset" name="Reset" value="Обновить данные">
+            <input type="submit" name="submit" value="Отправить данные">
+        </p>
+    
+
+    <script>
+
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>

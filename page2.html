@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Офис - Страница 2</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink;  
+            color: white;            
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page1.html">Персонажи. Таблица</a></li>
+            <li><a href="page2.html">Галерея</a></li>
+            <li><a href="page3.html">Личные контакты</a></li>
+            <li><a href="page4.html">Заказ мерча</a></li>
+            <li><a href="https://officeserial.ru/" target="_blank">Смотреть сериал</a></li>
+        </ul>
+    </nav>
+
+    <h1>Галерея изображений</h1>
+    <p>
+        <h3>Кадр 1</h3>
+        <img
+      src="img/galery1.webp"
+      alt="Кадр из сериала Офис"
+      width="600"
+      height="400" 
+      title="Кадр"/>
+    </p>
+    <p>
+        <h3>Кадр 2</h3>
+        <img
+      src="img/galery2.jpg"
+      alt="Кадр из сериала Офис"
+      width="600"
+      height="400" 
+      title="Кадр"/>
+    </p>
+    <p>
+        <h3>Кадр 3</h3>
+        <img
+      src="img/galery3.jpg"
+      alt="Кадр из сериала Офис"
+      width="600"
+      height="400" 
+      title="Кадр"/>
+    </p>
+    <p>
+        <h3>Кадр 4</h3>
+        <img
+      src="img/office.jpg"
+      alt="Кадр из сериала Офис"
+      width="600"
+      height="400" 
+      title="Кадр"/>
+    </p>
+
+    <script>
+
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>

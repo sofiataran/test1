@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Офис - Страница 1</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink; 
+            color: white;            
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            h3, h4 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border: 2px solid pink;
+            border-radius: 10px;
+            padding: 20px;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"], 
+        input[type="reset"] {
+            font-weight: bold; 
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        input[type="submit"] {
+            background-color: pink; 
+            color: black;
+            margin-right: 10%; 
+        }
+
+        input[type="reset"] {
+            background-color: #ccc; 
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(148, 103, 111); 
+        }
+
+        input[type="reset"]:hover {
+            background-color: #b3b3b3; 
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page1.html">Персонажи. Таблица</a></li>
+            <li><a href="page2.html">Галерея</a></li>
+            <li><a href="page3.html">Личные контакты</a></li>
+            <li><a href="page4.html">Заказ мерча</a></li>
+            <li><a href="https://officeserial.ru/" target="_blank">Смотреть сериал</a></li>
+        </ul>
+    </nav>
+
+    <h3>Формы. Оформление покупки фанатского мерча</h3>
+<h4>На нашем сайте вы можете приобрести мерч по сериалу. Пожалуйста, заполните поле для оформления заказа</h4>
+
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+
+    <p><b>Для оформления:</b><input type="hidden" name="q" value="order data"></p>
+
+    <p><b>Фамилия:</b><input type="text" name="second_name" size=20 value=""></p>
+
+    <p><b>Имя:</b><input type="text" name="first_name" size=20 value=""></p>
+
+    <p><b>Товар:</b>
+        <select id="product" name="product_name">
+            <option value="dwight_bobblehead">Фигурка Дуайта</option>
+            <option value="dunder_mifflin_mug">Кружка Dunder Mifflin</option>
+            <option value="dunder_mifflin_tshirt">Футболка Dunder Mifflin</option>
+        </select>
+    </p>
+
+    <p><b>Количество:</b><input type="number" name="group" size=20 value=""></p>
+
+    <p><b>Адрес доставки:</b><input type="text" name="adress" size=20 value=""></p>
+
+    <p><b>Тип доставки:</b><br>
+        <input type="radio" name="delivery" value="Basic">Стандартная доставка <br>
+        <input type="radio" name="delivery" value="Express">Экспресс-доставка <br>
+    </p>
+
+    <p><b>Дополнительные товары:</b><br>
+        <input type="checkbox" name="services" value="present">Подарочная упаковка <br> 
+        <input type="checkbox" name="services" value="postcard">Открытка с пожеланиями <br>
+        <input type="checkbox" name="services" value="confetti">Конфетти <br>
+        <input type="checkbox" name="services" value="nothing">Ничего <br>
+    </p>
+
+    <p><b>Дата оформления заказа:</b><input type="date" name="user_date" value=""></p>
+
+    <p><b>Введите пароль для подтверждения заказа:</b><input type="password" name="password" size=9 value=""></p>
+
+    <p>
+        <input type="reset" name="Reset" value="Сбросить данные"> 
+        <input type="submit" name="submit" value="Отправить данные">
+    </p>
+
+
+    <script>
+ 
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>
